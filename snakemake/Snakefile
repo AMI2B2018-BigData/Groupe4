@@ -1,0 +1,32 @@
+# Détermination de la meilleure solution predit par docking
+#
+# Pour faire tourner la pipeline efficacement il faut installer
+# pypy, sinon le programme prendra 4 fois plus de temps soit
+# environs 2h au lieu de 30min
+
+import os
+
+try:
+    rec = config["rec"]
+except:
+    rec = "../python/Rec_natif.pdb"
+
+try:
+    ligdir = config["ligdir"]
+except:
+    ligdir="../python/confs_withH/"
+
+try:
+    out = config["out"]
+except:
+    out = "resultat.txt"
+
+# regle pour calculer le score de cornell pour chaque solutions predite
+# du docking
+rule cornell:
+    input:
+        ligdir
+    output:
+        out
+    shell:
+        "pypy cornell.py -rec {rec} -ligdir {ligdir} -out {out}"
