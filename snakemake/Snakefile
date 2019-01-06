@@ -25,21 +25,20 @@ except:
 LIGS = [i for i in os.listdir(ligdir) if ((not i.startswith(".")) and (i.endswith(".pdb")))]
 
 # Regle pour indiquer quel fichier on souhaite obtenir a la fin de notre pipeline
-rule target:
+rule Targets:
     input:
-        # expand("Cornell_results/{lig}_cor.txt", lig = LIGS),
-        # expand("Hydrophobic_results/{lig}_hyd.txt", lig = LIGS),
         "Cornell_results.txt",
         "Hydroph_results.txt",
         "Classement.txt"
 
-rule initialisation:
+# Creation des repertoires qui contiendrons les fichiers de score
+rule Initialisation:
     shell:
         "mkdir Cornell_results/ Hydrophobic_results/"
 
 # Regle pour calculer le score de cornell pour chaque solution predite
 # du docking
-rule cornell:
+rule Cornell:
     input:
        ligdir+"{lig}"
     output:
@@ -59,7 +58,7 @@ rule Hydrophobicity:
 
 
 # Regle pour classer les résultats
-rule merge_cor:
+rule Merge_Cornell:
     input:
         expand("Cornell_results/{lig}_cor.txt", lig = LIGS)
     output:
@@ -69,7 +68,7 @@ rule merge_cor:
         "&& rm -r {input}"
 
 # Regle pour classer les résultats
-rule merge_hyd:
+rule Merge_Hydrophobicity:
     input:
         expand("Hydrophobic_results/{lig}_hyd.txt", lig = LIGS)        
     output:
@@ -78,7 +77,7 @@ rule merge_hyd:
         "paste -d \"\n\" {input}* > {output}"
         "&& rm -r {input}"
 
-rule Multiplication_des_scores:
+rule Sort_Scores:
     input:
         merge_cor = "Cornell_results.txt",
         merge_hyd = "Hydroph_results.txt"
