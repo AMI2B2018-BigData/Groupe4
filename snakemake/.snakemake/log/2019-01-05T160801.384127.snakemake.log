@@ -1,4 +1,0 @@
-Building DAG of jobs...
-MissingInputException in line 34 of /home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile:
-Missing input files for rule all:
-Hydrophobic_results/1BRS_A_1BRS_B_allatom_939_DP.pdb_hyd.txt

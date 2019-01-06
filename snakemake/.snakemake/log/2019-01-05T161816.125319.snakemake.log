@@ -1,3 +1,0 @@
-TypeError in line 73 of /home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile:
-shellcmd() takes 2 positional arguments but 3 were given
-  File "/home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile", line 73, in <module>

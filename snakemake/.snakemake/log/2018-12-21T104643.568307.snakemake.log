@@ -1,3 +1,0 @@
-NameError in line 35 of /home/martin/Documents/M2-AMI2B/bigdata/Workflow-Project/snakemake/Snakefile:
-name 'out_sort' is not defined
-  File "/home/martin/Documents/M2-AMI2B/bigdata/Workflow-Project/snakemake/Snakefile", line 35, in <module>

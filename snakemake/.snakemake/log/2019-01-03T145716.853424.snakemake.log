@@ -1,4 +1,0 @@
-Building DAG of jobs...
-WildcardError in line 39 of /home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile:
-Wildcards in input files cannot be determined from output files:
-'out_sort'
