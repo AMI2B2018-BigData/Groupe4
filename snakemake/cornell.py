@@ -28,7 +28,6 @@ if("-h" in sys.argv):
 	usage()
 	sys.exit()
 
-
 try:
 	rec = sys.argv[sys.argv.index("-rec") + 1]
 except:

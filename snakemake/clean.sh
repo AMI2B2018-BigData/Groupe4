@@ -1,0 +1,1 @@
+rm Cornell_results/* Hydrophobic_results/* Classement.txt Hydroph_results.txt Cornell_results.txt	

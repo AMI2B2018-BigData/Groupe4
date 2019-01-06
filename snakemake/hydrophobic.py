@@ -62,7 +62,7 @@ propHydro2,nbinter2 = s.calcHydro(dLIG,dREC)
 if nbinter+ nbinter2 != 0 :
     hydro = ((propHydro*nbinter + propHydro2*nbinter2)/(nbinter + nbinter2))
 else :
-    hyfro = 0
+    hydro = 0
 
 ligne = lig.split("/")[-1]+":"+str(hydro)
 

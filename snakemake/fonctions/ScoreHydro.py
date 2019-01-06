@@ -37,15 +37,15 @@ def calcHydro(proteine1, proteine2) :
             # boucle sur tous les atomes de la deuxieme proteine
             for chain2 in proteine2["order_chaine"]:
                 for residu2 in proteine2[chain2]["order_residu"]:              
-                    dismin = 4#f.Dist_Courte(proteine1[residu1],proteine2[residu2])        
-            if dismin<5:
-                nbInter+=1
-                if hydrophobicResidue(proteine1[chain1][residu1]):
-                    hydrophobic+=1
-                else:
-                    hydrophil+=1
+                    dismin = f.Dist_Courte(proteine1[chain1][residu1],proteine2[chain2][residu2])        
+                    if dismin<5:
+                        nbInter+=1
+                        if hydrophobicResidue(proteine1[chain1][residu1]):
+                            hydrophobic+=1
+                        else:
+                            hydrophil+=1
     if nbInter!= 0:
-            propHydrophobic= float (hydrophobic)/nbInter
+            propHydrophobic= float(hydrophobic)/nbInter
     else:
             propHydrophobic=0
 
