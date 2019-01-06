@@ -1,0 +1,371 @@
+Building DAG of jobs...
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	948	cornell
+	1	merge_sort
+	950
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_155_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_155_DP.pdb_cor.txt
+    jobid: 914
+    wildcards: lig=1BRS_A_1BRS_B_allatom_155_DP.pdb
+
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_598_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_598_DP.pdb_cor.txt
+    jobid: 915
+    wildcards: lig=1BRS_A_1BRS_B_allatom_598_DP.pdb
+
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_260_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_260_DP.pdb_cor.txt
+    jobid: 913
+    wildcards: lig=1BRS_A_1BRS_B_allatom_260_DP.pdb
+
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_505_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_505_DP.pdb_cor.txt
+    jobid: 919
+    wildcards: lig=1BRS_A_1BRS_B_allatom_505_DP.pdb
+
+Finished job 913.
+1 of 950 steps (0.11%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_11_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_11_DP.pdb_cor.txt
+    jobid: 920
+    wildcards: lig=1BRS_A_1BRS_B_allatom_11_DP.pdb
+
+Finished job 914.
+2 of 950 steps (0.21%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_46_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_46_DP.pdb_cor.txt
+    jobid: 916
+    wildcards: lig=1BRS_A_1BRS_B_allatom_46_DP.pdb
+
+Finished job 919.
+3 of 950 steps (0.32%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_56_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_56_DP.pdb_cor.txt
+    jobid: 917
+    wildcards: lig=1BRS_A_1BRS_B_allatom_56_DP.pdb
+
+Finished job 915.
+4 of 950 steps (0.42%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_777_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_777_DP.pdb_cor.txt
+    jobid: 918
+    wildcards: lig=1BRS_A_1BRS_B_allatom_777_DP.pdb
+
+Finished job 920.
+5 of 950 steps (0.53%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_621_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_621_DP.pdb_cor.txt
+    jobid: 908
+    wildcards: lig=1BRS_A_1BRS_B_allatom_621_DP.pdb
+
+Finished job 916.
+6 of 950 steps (0.63%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_579_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_579_DP.pdb_cor.txt
+    jobid: 909
+    wildcards: lig=1BRS_A_1BRS_B_allatom_579_DP.pdb
+
+Finished job 917.
+7 of 950 steps (0.74%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_501_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_501_DP.pdb_cor.txt
+    jobid: 910
+    wildcards: lig=1BRS_A_1BRS_B_allatom_501_DP.pdb
+
+Finished job 918.
+8 of 950 steps (0.84%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_740_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_740_DP.pdb_cor.txt
+    jobid: 911
+    wildcards: lig=1BRS_A_1BRS_B_allatom_740_DP.pdb
+
+Finished job 908.
+9 of 950 steps (0.95%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_466_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_466_DP.pdb_cor.txt
+    jobid: 912
+    wildcards: lig=1BRS_A_1BRS_B_allatom_466_DP.pdb
+
+Finished job 909.
+10 of 950 steps (1%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_783_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_783_DP.pdb_cor.txt
+    jobid: 900
+    wildcards: lig=1BRS_A_1BRS_B_allatom_783_DP.pdb
+
+Finished job 910.
+11 of 950 steps (1%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_439_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_439_DP.pdb_cor.txt
+    jobid: 901
+    wildcards: lig=1BRS_A_1BRS_B_allatom_439_DP.pdb
+
+Finished job 911.
+12 of 950 steps (1%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_907_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_907_DP.pdb_cor.txt
+    jobid: 902
+    wildcards: lig=1BRS_A_1BRS_B_allatom_907_DP.pdb
+
+Finished job 912.
+13 of 950 steps (1%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_841_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_841_DP.pdb_cor.txt
+    jobid: 898
+    wildcards: lig=1BRS_A_1BRS_B_allatom_841_DP.pdb
+
+Finished job 900.
+14 of 950 steps (1%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_156_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_156_DP.pdb_cor.txt
+    jobid: 899
+    wildcards: lig=1BRS_A_1BRS_B_allatom_156_DP.pdb
+
+Finished job 901.
+15 of 950 steps (2%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_493_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_493_DP.pdb_cor.txt
+    jobid: 906
+    wildcards: lig=1BRS_A_1BRS_B_allatom_493_DP.pdb
+
+Finished job 902.
+16 of 950 steps (2%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_216_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_216_DP.pdb_cor.txt
+    jobid: 907
+    wildcards: lig=1BRS_A_1BRS_B_allatom_216_DP.pdb
+
+Finished job 906.
+17 of 950 steps (2%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_254_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_254_DP.pdb_cor.txt
+    jobid: 903
+    wildcards: lig=1BRS_A_1BRS_B_allatom_254_DP.pdb
+
+Finished job 898.
+18 of 950 steps (2%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_162_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_162_DP.pdb_cor.txt
+    jobid: 904
+    wildcards: lig=1BRS_A_1BRS_B_allatom_162_DP.pdb
+
+Finished job 899.
+19 of 950 steps (2%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_103_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_103_DP.pdb_cor.txt
+    jobid: 905
+    wildcards: lig=1BRS_A_1BRS_B_allatom_103_DP.pdb
+
+Finished job 907.
+20 of 950 steps (2%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_263_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_263_DP.pdb_cor.txt
+    jobid: 887
+    wildcards: lig=1BRS_A_1BRS_B_allatom_263_DP.pdb
+
+Finished job 903.
+21 of 950 steps (2%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_118_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_118_DP.pdb_cor.txt
+    jobid: 888
+    wildcards: lig=1BRS_A_1BRS_B_allatom_118_DP.pdb
+
+Finished job 905.
+22 of 950 steps (2%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_612_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_612_DP.pdb_cor.txt
+    jobid: 889
+    wildcards: lig=1BRS_A_1BRS_B_allatom_612_DP.pdb
+
+Finished job 904.
+23 of 950 steps (2%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_403_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_403_DP.pdb_cor.txt
+    jobid: 884
+    wildcards: lig=1BRS_A_1BRS_B_allatom_403_DP.pdb
+
+Finished job 887.
+24 of 950 steps (3%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_547_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_547_DP.pdb_cor.txt
+    jobid: 890
+    wildcards: lig=1BRS_A_1BRS_B_allatom_547_DP.pdb
+
+Finished job 888.
+25 of 950 steps (3%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_465_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_465_DP.pdb_cor.txt
+    jobid: 886
+    wildcards: lig=1BRS_A_1BRS_B_allatom_465_DP.pdb
+
+Finished job 884.
+26 of 950 steps (3%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_784_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_784_DP.pdb_cor.txt
+    jobid: 892
+    wildcards: lig=1BRS_A_1BRS_B_allatom_784_DP.pdb
+
+Finished job 889.
+27 of 950 steps (3%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_453_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_453_DP.pdb_cor.txt
+    jobid: 894
+    wildcards: lig=1BRS_A_1BRS_B_allatom_453_DP.pdb
+
+Finished job 890.
+28 of 950 steps (3%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_661_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_661_DP.pdb_cor.txt
+    jobid: 895
+    wildcards: lig=1BRS_A_1BRS_B_allatom_661_DP.pdb
+
+Finished job 894.
+29 of 950 steps (3%) done
+Finished job 886.
+30 of 950 steps (3%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_405_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_405_DP.pdb_cor.txt
+    jobid: 896
+    wildcards: lig=1BRS_A_1BRS_B_allatom_405_DP.pdb
+
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_760_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_760_DP.pdb_cor.txt
+    jobid: 897
+    wildcards: lig=1BRS_A_1BRS_B_allatom_760_DP.pdb
+
+Finished job 892.
+31 of 950 steps (3%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_946_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_946_DP.pdb_cor.txt
+    jobid: 891
+    wildcards: lig=1BRS_A_1BRS_B_allatom_946_DP.pdb
+
+Finished job 895.
+32 of 950 steps (3%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_287_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_287_DP.pdb_cor.txt
+    jobid: 893
+    wildcards: lig=1BRS_A_1BRS_B_allatom_287_DP.pdb
+
+Terminating processes on user request.
+Error in rule cornell:
+    jobid: 897
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_760_DP.pdb_cor.txt
+
+Error in rule cornell:
+    jobid: 893
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_287_DP.pdb_cor.txt
+Error in rule cornell:
+
+    jobid: 896
+Error in rule cornell:
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_405_DP.pdb_cor.txt
+    jobid: 891
+RuleException:
+CalledProcessError in line 48 of /home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile:
+Command ' set -euo pipefail;  pypy cornell.py -rec ../python/Rec_natif.pdb -lig ../python/confs_withH/1BRS_A_1BRS_B_allatom_760_DP.pdb > Cornell_results/1BRS_A_1BRS_B_allatom_760_DP.pdb_cor.txt ' returned non-zero exit status 1.
+  File "/home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile", line 48, in __rule_cornell
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+
+RuleException:
+CalledProcessError in line 48 of /home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile:
+Command ' set -euo pipefail;  pypy cornell.py -rec ../python/Rec_natif.pdb -lig ../python/confs_withH/1BRS_A_1BRS_B_allatom_287_DP.pdb > Cornell_results/1BRS_A_1BRS_B_allatom_287_DP.pdb_cor.txt ' returned non-zero exit status 1.
+  File "/home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile", line 48, in __rule_cornell
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_946_DP.pdb_cor.txt
+Removing output files of failed job cornell since they might be corrupted:
+Cornell_results/1BRS_A_1BRS_B_allatom_760_DP.pdb_cor.txt
+
+RuleException:
+CalledProcessError in line 48 of /home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile:
+Command ' set -euo pipefail;  pypy cornell.py -rec ../python/Rec_natif.pdb -lig ../python/confs_withH/1BRS_A_1BRS_B_allatom_405_DP.pdb > Cornell_results/1BRS_A_1BRS_B_allatom_405_DP.pdb_cor.txt ' returned non-zero exit status 1.
+  File "/home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile", line 48, in __rule_cornell
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Removing output files of failed job cornell since they might be corrupted:
+Cornell_results/1BRS_A_1BRS_B_allatom_287_DP.pdb_cor.txt
+Removing output files of failed job cornell since they might be corrupted:
+Cornell_results/1BRS_A_1BRS_B_allatom_405_DP.pdb_cor.txt
+RuleException:
+CalledProcessError in line 48 of /home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile:
+Command ' set -euo pipefail;  pypy cornell.py -rec ../python/Rec_natif.pdb -lig ../python/confs_withH/1BRS_A_1BRS_B_allatom_946_DP.pdb > Cornell_results/1BRS_A_1BRS_B_allatom_946_DP.pdb_cor.txt ' returned non-zero exit status 1.
+  File "/home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile", line 48, in __rule_cornell
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Removing output files of failed job cornell since they might be corrupted:
+Cornell_results/1BRS_A_1BRS_B_allatom_946_DP.pdb_cor.txt
+Complete log: .snakemake/log/2019-01-05T153115.668301.snakemake.log

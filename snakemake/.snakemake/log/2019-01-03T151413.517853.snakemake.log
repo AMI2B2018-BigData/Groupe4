@@ -1,0 +1,32 @@
+Building DAG of jobs...
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	cornell
+	1	sort
+	3
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_939_DP.pdb
+    output: resultat.txt
+    jobid: 2
+
+Finished job 2.
+1 of 3 steps (33%) done
+
+rule sort:
+    input: resultat.txt
+    output: resultat_sort.txt
+    jobid: 1
+
+Finished job 1.
+2 of 3 steps (67%) done
+
+localrule all:
+    input: resultat_sort.txt
+    jobid: 0
+
+Finished job 0.
+3 of 3 steps (100%) done

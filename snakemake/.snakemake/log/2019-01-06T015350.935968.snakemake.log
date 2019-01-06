@@ -1,0 +1,25 @@
+Building DAG of jobs...
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	Multiplication_des_scores
+	1	all
+	2
+
+rule Multiplication_des_scores:
+    output: Classement.txt
+    jobid: 1829
+
+Error in rule Multiplication_des_scores:
+    jobid: 1829
+    output: Classement.txt
+
+RuleException:
+NameError in line 91 of /home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile:
+The name ' print $1, $1 * $2 \\' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}
+  File "/home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile", line 91, in __rule_Multiplication_des_scores
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Will exit after finishing currently running jobs.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2019-01-06T015350.935968.snakemake.log

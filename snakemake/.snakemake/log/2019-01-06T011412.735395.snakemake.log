@@ -1,0 +1,26 @@
+Building DAG of jobs...
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	merge_sort
+	2
+
+rule merge_sort:
+    input: Cornell_results/, Hydrophobic_results
+    output: Cornell_results_sort.txt, Hydroph_results_sort.txt
+    jobid: 342
+
+Error in rule merge_sort:
+    jobid: 342
+    output: Cornell_results_sort.txt, Hydroph_results_sort.txt
+
+RuleException:
+NameError in line 76 of /home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile:
+The name 'cor' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}
+  File "/home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile", line 76, in __rule_merge_sort
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Will exit after finishing currently running jobs.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2019-01-06T011412.735395.snakemake.log

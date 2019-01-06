@@ -1,0 +1,86 @@
+Building DAG of jobs...
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	948	Hydrophobicity
+	1	all
+	1	merge_sort
+	950
+
+rule Hydrophobicity:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_137_DP.pdb
+    output: Hydrophobic_results/1BRS_A_1BRS_B_allatom_137_DP.pdb_hyd.txt
+    jobid: 717
+    wildcards: lig=1BRS_A_1BRS_B_allatom_137_DP.pdb
+
+
+rule Hydrophobicity:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_783_DP.pdb
+    output: Hydrophobic_results/1BRS_A_1BRS_B_allatom_783_DP.pdb_hyd.txt
+    jobid: 238
+    wildcards: lig=1BRS_A_1BRS_B_allatom_783_DP.pdb
+
+
+rule Hydrophobicity:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_893_DP.pdb
+    output: Hydrophobic_results/1BRS_A_1BRS_B_allatom_893_DP.pdb_hyd.txt
+    jobid: 239
+    wildcards: lig=1BRS_A_1BRS_B_allatom_893_DP.pdb
+
+
+rule Hydrophobicity:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_524_DP.pdb
+    output: Hydrophobic_results/1BRS_A_1BRS_B_allatom_524_DP.pdb_hyd.txt
+    jobid: 1222
+    wildcards: lig=1BRS_A_1BRS_B_allatom_524_DP.pdb
+
+Error in rule Hydrophobicity:
+    jobid: 1222
+    output: Hydrophobic_results/1BRS_A_1BRS_B_allatom_524_DP.pdb_hyd.txt
+
+Error in rule Hydrophobicity:
+Error in rule Hydrophobicity:
+    jobid: 239
+    jobid: 238
+Error in rule Hydrophobicity:
+    output: Hydrophobic_results/1BRS_A_1BRS_B_allatom_893_DP.pdb_hyd.txt
+    output: Hydrophobic_results/1BRS_A_1BRS_B_allatom_783_DP.pdb_hyd.txt
+    jobid: 717
+RuleException:
+CalledProcessError in line 60 of /home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile:
+Command ' set -euo pipefail;  pypy Hydrophobic.py -rec ../python/Rec_natif.pdb -lig ../python/confs_withH/1BRS_A_1BRS_B_allatom_524_DP.pdb > Hydrophobic_results/1BRS_A_1BRS_B_allatom_524_DP.pdb_hyd.txt ' returned non-zero exit status 1.
+  File "/home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile", line 60, in __rule_Hydrophobicity
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+
+
+    output: Hydrophobic_results/1BRS_A_1BRS_B_allatom_137_DP.pdb_hyd.txt
+Removing output files of failed job Hydrophobicity since they might be corrupted:
+Hydrophobic_results/1BRS_A_1BRS_B_allatom_524_DP.pdb_hyd.txt
+
+Will exit after finishing currently running jobs.
+RuleException:
+CalledProcessError in line 60 of /home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile:
+Command ' set -euo pipefail;  pypy Hydrophobic.py -rec ../python/Rec_natif.pdb -lig ../python/confs_withH/1BRS_A_1BRS_B_allatom_137_DP.pdb > Hydrophobic_results/1BRS_A_1BRS_B_allatom_137_DP.pdb_hyd.txt ' returned non-zero exit status 1.
+  File "/home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile", line 60, in __rule_Hydrophobicity
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Removing output files of failed job Hydrophobicity since they might be corrupted:
+Hydrophobic_results/1BRS_A_1BRS_B_allatom_137_DP.pdb_hyd.txt
+RuleException:
+CalledProcessError in line 60 of /home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile:
+Command ' set -euo pipefail;  pypy Hydrophobic.py -rec ../python/Rec_natif.pdb -lig ../python/confs_withH/1BRS_A_1BRS_B_allatom_893_DP.pdb > Hydrophobic_results/1BRS_A_1BRS_B_allatom_893_DP.pdb_hyd.txt ' returned non-zero exit status 1.
+  File "/home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile", line 60, in __rule_Hydrophobicity
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+RuleException:
+CalledProcessError in line 60 of /home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile:
+Command ' set -euo pipefail;  pypy Hydrophobic.py -rec ../python/Rec_natif.pdb -lig ../python/confs_withH/1BRS_A_1BRS_B_allatom_783_DP.pdb > Hydrophobic_results/1BRS_A_1BRS_B_allatom_783_DP.pdb_hyd.txt ' returned non-zero exit status 1.
+  File "/home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile", line 60, in __rule_Hydrophobicity
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Removing output files of failed job Hydrophobicity since they might be corrupted:
+Hydrophobic_results/1BRS_A_1BRS_B_allatom_893_DP.pdb_hyd.txt
+Will exit after finishing currently running jobs.
+Removing output files of failed job Hydrophobicity since they might be corrupted:
+Hydrophobic_results/1BRS_A_1BRS_B_allatom_783_DP.pdb_hyd.txt
+Will exit after finishing currently running jobs.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2019-01-03T192853.706736.snakemake.log

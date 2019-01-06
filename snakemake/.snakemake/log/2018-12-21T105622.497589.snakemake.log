@@ -1,0 +1,27 @@
+Building DAG of jobs...
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	cornell
+	2
+
+rule cornell:
+    input: ../python/confs_withH/
+    output: resultat_sort.txt
+    jobid: 1
+
+Terminating processes on user request.
+Error in rule cornell:
+    jobid: 1
+    output: resultat_sort.txt
+
+RuleException:
+CalledProcessError in line 48 of /home/martin/Documents/M2-AMI2B/bigdata/Workflow-Project/snakemake/Snakefile:
+Command ' set -euo pipefail;  pypy cornell.py -rec ../python/Rec_natif.pdb -ligdir ../python/confs_withH/ -out resultat_sort.txt ' returned non-zero exit status 1.
+  File "/home/martin/Documents/M2-AMI2B/bigdata/Workflow-Project/snakemake/Snakefile", line 48, in __rule_cornell
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Removing output files of failed job cornell since they might be corrupted:
+resultat_sort.txt
+Complete log: .snakemake/log/2018-12-21T105622.497589.snakemake.log

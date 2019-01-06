@@ -2,10 +2,9 @@
 
 import os
 import sys
-sys.path.append("./fonctions/")
-import structureToolsProjPython
-import Fonctions as f
-
+import fonctions.structureToolsProjPython as sttp
+import fonctions.Fonctions as f
+import fonctions.ScoreHydro as s
 
 def usage():
 	print("""
@@ -37,47 +36,27 @@ except:
 	sys.exit(1)
 
 try:
-	ligdir = sys.argv[sys.argv.index("-ligdir") + 1]
+	lig = sys.argv[sys.argv.index("-lig") + 1]
 except:
 	print("donnez le chemin vers le pdb du ligand")
 	sys.exit(1)
 
 try:
-	output = sys.argv[sys.argv.index("-out") + 1]
+	output = sys.argv[sys.argv.index("-o") + 1]
 except:
-	print("donnez le fichier de sortie")
+	print("donnez le chemin vers le fichier output")
 	sys.exit(1)
 
 chainRec = "B"
 chainLig = "D"
 
+dREC = sttp.preparePDB(rec, chainRec)
 
-LIGS = [i for i in os.listdir(ligdir) if i.split("_")[0] != "."]
-nb_lig = len(LIGS)
+dLIG = sttp.preparePDB(lig, chainLig)
 
-dREC = structureToolsProjPython.preparePDB(rec, chainRec)
+score = f.cornell_rigide(dREC,dLIG)
 
-fileOut = open(output,"w")
+ligne = lig.split("/")[-1]+":"+str(score)
 
-compteur = 0.0
-
-for lig in LIGS:
-	path_lig = ligdir+"/"+lig
-	dLIG = structureToolsProjPython.preparePDB(path_lig, chainLig)
-
-	score = f.cornell_rigide(dREC,dLIG)
-
-	ligne = lig+":"+str(score)+"\n"
-
-	fileOut.write(ligne)
-
-	compteur += 1
-	progression = int(compteur / nb_lig * 50)
-	progres_bar = '|'+ '-'*progression + " "*(50-progression) + "|"
-	pourcentage = "%.2f"%(compteur/nb_lig*100) + "%%"
-	commande = "printf ' "+ pourcentage +" \033[1;36m"+ progres_bar + "\033[0m\r'"
-
-
-	os.system(commande)
-
-fileOut.close()
+with open(output, "w") as o:
+	o.write(ligne)

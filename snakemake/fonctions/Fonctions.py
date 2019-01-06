@@ -37,7 +37,7 @@ def Dist_Courte(a,b) :
  	"""
 	nb_atome_a = len(a["order_atome"])
 	nb_atome_b = len(b["order_atome"])
-	dist = Distance(a['CA'],b['CA'])									# Distance de référence pour trouver la plus courte
+	dist = Distance(a['CA'],b['CA'])# Distance de référence pour trouver la plus courte
 	for i in range(0,nb_atome_a):
 		atome_a = a["order_atome"][i]
 		for j in range(0,nb_atome_b):

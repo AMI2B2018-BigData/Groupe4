@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 39 of /home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile:
+Missing input files for rule all:
+{wildcards.out_sort}

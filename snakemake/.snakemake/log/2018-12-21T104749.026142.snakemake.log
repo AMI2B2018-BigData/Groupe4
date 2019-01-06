@@ -1,0 +1,18 @@
+Building DAG of jobs...
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	Hydrophobicity
+	1	all
+	2
+
+localrule Hydrophobicity:
+    input: ../python/confs_withH/
+    output: resultat_sort.txt
+    jobid: 1
+
+Waiting at most 5 seconds for missing files.
+Will exit after finishing currently running jobs.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2018-12-21T104749.026142.snakemake.log

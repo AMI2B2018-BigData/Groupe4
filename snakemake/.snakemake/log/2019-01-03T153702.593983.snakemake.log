@@ -1,0 +1,73 @@
+Building DAG of jobs...
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	948	cornell
+	949
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_66_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_66_DP.pdb_cor.txt
+    jobid: 474
+    wildcards: lig=1BRS_A_1BRS_B_allatom_66_DP.pdb
+
+Finished job 474.
+1 of 949 steps (0.11%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_210_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_210_DP.pdb_cor.txt
+    jobid: 475
+    wildcards: lig=1BRS_A_1BRS_B_allatom_210_DP.pdb
+
+Finished job 475.
+2 of 949 steps (0.21%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_803_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_803_DP.pdb_cor.txt
+    jobid: 472
+    wildcards: lig=1BRS_A_1BRS_B_allatom_803_DP.pdb
+
+Finished job 472.
+3 of 949 steps (0.32%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_169_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_169_DP.pdb_cor.txt
+    jobid: 473
+    wildcards: lig=1BRS_A_1BRS_B_allatom_169_DP.pdb
+
+Finished job 473.
+4 of 949 steps (0.42%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_566_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_566_DP.pdb_cor.txt
+    jobid: 476
+    wildcards: lig=1BRS_A_1BRS_B_allatom_566_DP.pdb
+
+Finished job 476.
+5 of 949 steps (0.53%) done
+
+rule cornell:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_605_DP.pdb
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_605_DP.pdb_cor.txt
+    jobid: 477
+    wildcards: lig=1BRS_A_1BRS_B_allatom_605_DP.pdb
+
+Terminating processes on user request.
+Error in rule cornell:
+    jobid: 477
+    output: Cornell_results/1BRS_A_1BRS_B_allatom_605_DP.pdb_cor.txt
+
+RuleException:
+CalledProcessError in line 51 of /home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile:
+Command ' set -euo pipefail;  pypy cornell.py -rec ../python/Rec_natif.pdb -lig ../python/confs_withH/1BRS_A_1BRS_B_allatom_605_DP.pdb > Cornell_results/1BRS_A_1BRS_B_allatom_605_DP.pdb_cor.txt ' returned non-zero exit status 1.
+  File "/home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile", line 51, in __rule_cornell
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Removing output files of failed job cornell since they might be corrupted:
+Cornell_results/1BRS_A_1BRS_B_allatom_605_DP.pdb_cor.txt
+Complete log: .snakemake/log/2019-01-03T153702.593983.snakemake.log

@@ -1,0 +1,27 @@
+Building DAG of jobs...
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	Hydrophobicity
+	1	all
+	2
+
+rule Hydrophobicity:
+    input: ../python/confs_withH/1BRS_A_1BRS_B_allatom_939_DP.pdb
+    output: Hydrophobic_results/1BRS_A_1BRS_B_allatom_939_DP.pdb_hyd.txt
+    jobid: 912
+    wildcards: lig=1BRS_A_1BRS_B_allatom_939_DP.pdb
+
+Error in rule Hydrophobicity:
+    jobid: 912
+    output: Hydrophobic_results/1BRS_A_1BRS_B_allatom_939_DP.pdb_hyd.txt
+
+RuleException:
+CalledProcessError in line 60 of /home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile:
+Command ' set -euo pipefail;  pypy hydrophobic.py -rec ../python/Rec_natif.pdb -lig ../python/confs_withH/1BRS_A_1BRS_B_allatom_939_DP.pdb -o Hydrophobic_results/1BRS_A_1BRS_B_allatom_939_DP.pdb_hyd.txt ' returned non-zero exit status 1.
+  File "/home/martin/Documents/M2-AMI2B/bigdata/Workflow-ProjectV2/snakemake/Snakefile", line 60, in __rule_Hydrophobicity
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Will exit after finishing currently running jobs.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2019-01-05T161356.987799.snakemake.log

@@ -4,6 +4,9 @@
 # pypy, sinon le programme prendra 4 fois plus de temps soit
 # environs 2h au lieu de 30min
 
+
+# Construction du dag: snakemake --forceall --dag | dot -Tsvg > dag.svg
+
 import os
 
 try:
@@ -20,13 +23,71 @@ try:
     out = config["out"]
 except:
     out = "resultat.txt"
+out_sort = out.split(".")[0]+"_sort.txt"
+
+
+LIGS = [i for i in os.listdir(ligdir) if ((not i.startswith(".")) and (i.endswith(".pdb")))]
+
+i = 0
+
+# Regle pour indiquer quel fichier on souhaite obtenir a la fin de notre pipeline
+rule target:
+    input:
+        expand("Cornell_results/{lig}_cor.txt", lig = LIGS),
+        expand("Hydrophobic_results/{lig}_hyd.txt", lig = LIGS),
+        "Cornell_results.txt",
+        "Hydroph_results.txt",
+        "Classement.txt"
 
 # regle pour calculer le score de cornell pour chaque solutions predite
 # du docking
 rule cornell:
     input:
-        ligdir
+       ligdir+"{lig}"
     output:
-        out
+        "Cornell_results/{lig}_cor.txt"
     shell:
-        "pypy cornell.py -rec {rec} -ligdir {ligdir} -out {out}"
+        "pypy cornell.py -rec {rec} -lig {input} -o {output}"
+
+
+
+# Regle pour calculer le score d'hydrophobicité de l'interface
+# entre les solutions et le recepteur
+rule Hydrophobicity:
+    input:
+       ligdir+"{lig}"
+    output:
+        "Hydrophobic_results/{lig}_hyd.txt"
+    shell:
+        "pypy hydrophobic.py -rec {rec} -lig {input} -o {output}"
+
+
+# Regle pour classer les résultats
+rule merge_cor:
+    input:
+        expand("Cornell_results/{lig}_cor.txt", lig = LIGS)
+    output:
+        "Cornell_results.txt"
+    shell:
+        "paste -d \"\n\" {input}* > {output}"
+
+# Regle pour classer les résultats
+rule merge_hyd:
+    input:
+        expand("Hydrophobic_results/{lig}_hyd.txt", lig = LIGS)        
+    output:
+        "Hydroph_results.txt"
+    shell:
+        "paste -d \"\n\" {input}* > {output}"
+        # "paste -d \"\n\" {hyd}* | sort  +1n -t \":\" > {hyd_out}"
+
+rule Multiplication_des_scores:
+    input:
+        merge_cor = "Cornell_results.txt",
+        merge_hyd = "Hydroph_results.txt"
+    output:
+        "Classement.txt"
+    shell:
+        "join -t \":\" {input.merge_cor} {input.merge_hyd} | "
+        "awk -F \":\" 'BEGIN {{ OFS = \":\" }}{{ print $1, $2 * $3 }}' "
+        "| sort  +1n -t \":\" > {output}"
